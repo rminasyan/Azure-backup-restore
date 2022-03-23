@@ -1,0 +1,4 @@
+$pgserver = ''
+$userName = ''
+
+$rootPath = ''
