@@ -8,7 +8,7 @@ $dbs = @(
 #add db names here
 
 )
-$destination = New-Item -Path $rootPath -ItemType Directory -Name 'backup'
+$destination = New-Item -Path $rootPath -ItemType Directory -Name ''
 
 function BackupPGserver {
     Param
