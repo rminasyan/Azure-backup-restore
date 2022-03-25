@@ -31,3 +31,5 @@ function BackupPGserver {
     foreach ($db in $dbs) {
         pg_dump.exe -Fc -v --host=$pgserver --username=$userName --dbname=$db -f "$destination\$db.dump" 
     }
+    Write-Host ("INFO: $(Get-Date): Finished backup process")      
+}
