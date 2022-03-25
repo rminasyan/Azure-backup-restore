@@ -27,4 +27,7 @@ function BackupPGserver {
     )
             
     Write-Host ("INFO: $(Get-Date): $($dbs.Count) dbs should be backup")
-    
+
+    foreach ($db in $dbs) {
+        pg_dump.exe -Fc -v --host=$pgserver --username=$userName --dbname=$db -f "$destination\$db.dump" 
+    }
