@@ -25,3 +25,6 @@ function BackupPGserver {
         [Parameter(Mandatory = $true)]
         [string[]]$destination
     )
+            
+    Write-Host ("INFO: $(Get-Date): $($dbs.Count) dbs should be backup")
+    
