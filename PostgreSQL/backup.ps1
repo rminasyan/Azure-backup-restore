@@ -33,3 +33,5 @@ function BackupPGserver {
     }
     Write-Host ("INFO: $(Get-Date): Finished backup process")      
 }
+
+BackupPGserver -pgserver $pgserver -userName $userName -dbs $dbs -destination $destination
