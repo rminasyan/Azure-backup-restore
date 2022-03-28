@@ -1,4 +1,4 @@
-
+Connect-AzAccount
 
 $destination = ''
 
