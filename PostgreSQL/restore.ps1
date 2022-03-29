@@ -19,3 +19,5 @@ function RestorePGserver {
         [string]$userName
 
     )
+
+    $files = Get-ChildItem -Path $destination
