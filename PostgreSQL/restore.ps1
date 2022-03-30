@@ -21,3 +21,8 @@ function RestorePGserver {
     )
 
     $files = Get-ChildItem -Path $destination
+
+    foreach ($file in $files) {
+        $fileName = [io.path]::GetFileNameWithoutExtension("$file")
+        pg_restore.exe -v --no-owner --host=$pgserver --port=5432 --username=$userName --dbname=$fileName $file
+    }
