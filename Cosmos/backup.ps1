@@ -4,3 +4,8 @@ $rootPath = ''
 #cosmosDB
 $cosmosDb = ''
 $cosmosConnStr = ''
+
+#storage account
+$SASToken = ''
+$containerName = ''
+$storageAccount = ''
