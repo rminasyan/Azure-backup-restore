@@ -9,3 +9,9 @@ $cosmosConnStr = ''
 $SASToken = ''
 $containerName = ''
 $storageAccount = ''
+
+$collections = @(
+
+'add collection names'
+
+)
