@@ -15,3 +15,5 @@ $collections = @(
 'add collection names'
 
 )
+
+$destination = New-Item -Path $rootPath -ItemType Directory -Name ''
