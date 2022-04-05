@@ -17,3 +17,19 @@ $collections = @(
 )
 
 $destination = New-Item -Path $rootPath -ItemType Directory -Name ''
+
+function BackupCosmosDB { 
+    Param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$destination,
+
+        [Parameter(Mandatory = $true)]
+        [string]$cosmosDb,
+    
+        [Parameter(Mandatory = $true)]
+        [string]$cosmosConnStr,
+
+        [Parameter(Mandatory = $true)]
+        [array]$collections
+    )
