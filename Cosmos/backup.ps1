@@ -41,3 +41,12 @@ function BackupCosmosDB {
 
     Write-Host ("INFO: $(Get-Date): Finished collections backup")
 }
+
+function ArchiveToBlob {
+    Param
+    (
+        [Parameter(Mandatory = $true)]
+        [string]$destination,
+        
+        [Parameter(Mandatory = $true)]
+        [string]$SASToken,
