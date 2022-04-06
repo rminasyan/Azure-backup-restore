@@ -33,3 +33,8 @@ function BackupCosmosDB {
         [Parameter(Mandatory = $true)]
         [array]$collections
     )
+
+    foreach ($collection in $collections) {
+        Write-Host("INFO: $(Get-Date): Importing $collection collection")
+        dt.exe /s:DocumentDB /s.ConnectionString:"Database=$cosmosDb;$cosmosConnStr" /s.Collection:$collection /t:JsonFile /t.File:"$destination\$collection.json" /t.Overwrite
+    }
