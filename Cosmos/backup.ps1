@@ -50,3 +50,10 @@ function ArchiveToBlob {
         
         [Parameter(Mandatory = $true)]
         [string]$SASToken,
+                
+        [Parameter(Mandatory = $true)]
+        [string]$containerName,
+        
+        [Parameter(Mandatory = $true)]
+        [string]$storageAccount
+    )
