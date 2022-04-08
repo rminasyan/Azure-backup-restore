@@ -63,3 +63,6 @@ function ArchiveToBlob {
         Write-Host("INFO: $(Get-Date): Importing $collection collection")
         dt.exe /s:DocumentDB /s.ConnectionString:"Database=$cosmosDb;$cosmosConnStr" /s.Collection:$collection /t:JsonFile /t.File:"$destination\$collection.json" /t.Overwrite
     }
+
+    Write-Host ("INFO: $(Get-Date): Finished collections backup")
+}
