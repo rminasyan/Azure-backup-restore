@@ -59,3 +59,8 @@ function ArchiveToBlob {
     )
 
     Write-Host ("INFO: $(Get-Date): Starting to Archive")
+    $compress = @{
+        Path             = $destination
+        CompressionLevel = "Fastest"
+        DestinationPath  = $destination
+    }
