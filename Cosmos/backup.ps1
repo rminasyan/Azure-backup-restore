@@ -64,3 +64,4 @@ function ArchiveToBlob {
         CompressionLevel = "Fastest"
         DestinationPath  = $destination
     }
+        Compress-Archive @compress
