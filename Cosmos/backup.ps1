@@ -67,3 +67,4 @@ function ArchiveToBlob {
     Compress-Archive @compress
 
     Write-Host ("INFO: $(Get-Date): Sending to Blob storage")
+    $uri = "https://$storageAccount.blob.core.windows.net/$containerName/$SASToken"
