@@ -68,3 +68,6 @@ function ArchiveToBlob {
 
     Write-Host ("INFO: $(Get-Date): Sending to Blob storage")
     $uri = "https://$storageAccount.blob.core.windows.net/$containerName/$SASToken"
+    try {  
+        azcopy.exe copy "$destination.zip" $uri
+    }
