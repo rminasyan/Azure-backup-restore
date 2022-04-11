@@ -64,4 +64,6 @@ function ArchiveToBlob {
         CompressionLevel = "Fastest"
         DestinationPath  = $destination
     }
-        Compress-Archive @compress
+    Compress-Archive @compress
+
+    Write-Host ("INFO: $(Get-Date): Sending to Blob storage")
