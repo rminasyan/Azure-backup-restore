@@ -74,3 +74,5 @@ function ArchiveToBlob {
     catch {
             ("ERROR: $(Get-Date): Couldn't send file to blob storage. Check the az copy logs")
     }
+    Write-Host ("INFO: $(Get-Date): Finished archiving process")
+}
