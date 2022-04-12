@@ -71,3 +71,6 @@ function ArchiveToBlob {
     try {  
         azcopy.exe copy "$destination.zip" $uri
     }
+    catch {
+            ("ERROR: $(Get-Date): Couldn't send file to blob storage. Check the az copy logs")
+    }
