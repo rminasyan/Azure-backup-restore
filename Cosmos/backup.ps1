@@ -76,3 +76,5 @@ function ArchiveToBlob {
     }
     Write-Host ("INFO: $(Get-Date): Finished archiving process")
 }
+
+BackupCosmosDB -destination $destination -cosmosDb $cosmosDb -cosmosConnStr $cosmosConnStr -collections $collections
