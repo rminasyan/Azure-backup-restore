@@ -78,3 +78,4 @@ function ArchiveToBlob {
 }
 
 BackupCosmosDB -destination $destination -cosmosDb $cosmosDb -cosmosConnStr $cosmosConnStr -collections $collections
+ArchiveToBlob -destination $destination -SASToken $SASToken -containerName $containerName -storageAccount $storageAccount
