@@ -1,0 +1,3 @@
+$rootPath = ''
+$storageAccount = ''
+$SASToken = ''
