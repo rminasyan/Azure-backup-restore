@@ -6,3 +6,8 @@ $containerName = ''
 
 #local path where the files will be downloaded
 $destination = ''
+
+#destination cosmosDB
+$cosmosbackup = ''
+$cosmosDb = ''
+$cosmosConnStr = ''
