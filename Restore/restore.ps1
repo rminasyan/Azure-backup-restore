@@ -16,3 +16,6 @@ $cosmosConnStr = ''
 $backuppg = ''
 $pgserver = ''
 $userName = ''
+
+#download backup files
+Write-Host ("INFO: $(Get-Date): Getting storage account context")
