@@ -11,3 +11,8 @@ $destination = ''
 $cosmosbackup = ''
 $cosmosDb = ''
 $cosmosConnStr = ''
+
+#destination pg server
+$backuppg = ''
+$pgserver = ''
+$userName = ''
