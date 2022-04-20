@@ -19,3 +19,5 @@ $userName = ''
 
 #download backup files
 Write-Host ("INFO: $(Get-Date): Getting storage account context")
+
+$key = (Get-AzStorageAccountKey -ResourceGroupName $rg -Name $storageaccount)[0].Value
