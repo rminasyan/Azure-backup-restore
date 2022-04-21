@@ -22,3 +22,4 @@ Write-Host ("INFO: $(Get-Date): Getting storage account context")
 
 $key = (Get-AzStorageAccountKey -ResourceGroupName $rg -Name $storageaccount)[0].Value
 $context = New-AzStorageContext -StorageAccountName $storageaccount -StorageAccountKey $key
+Write-Host ("INFO: $(Get-Date): Downloading cosmos backup file from SA")
