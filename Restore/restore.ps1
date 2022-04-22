@@ -24,3 +24,4 @@ $key = (Get-AzStorageAccountKey -ResourceGroupName $rg -Name $storageaccount)[0]
 $context = New-AzStorageContext -StorageAccountName $storageaccount -StorageAccountKey $key
 Write-Host ("INFO: $(Get-Date): Downloading cosmos backup file from SA")
 Get-AzStorageBlobContent -Container $containerName -blob "$cosmosbackup.zip" -Destination $destination -Context $context
+Write-Host ("INFO: $(Get-Date): Downloading PG backup file from SA")
