@@ -26,3 +26,4 @@ Write-Host ("INFO: $(Get-Date): Downloading cosmos backup file from SA")
 Get-AzStorageBlobContent -Container $containerName -blob "$cosmosbackup.zip" -Destination $destination -Context $context
 Write-Host ("INFO: $(Get-Date): Downloading PG backup file from SA")
 Get-AzStorageBlobContent -Container $containerName -blob "$backuppg.zip" -Destination $destination -Context $context
+Write-Host ("INFO: $(Get-Date): Finished downloading files")
