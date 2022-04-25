@@ -35,3 +35,6 @@ function RestoreCosmosDb
     
         [Parameter(Mandatory=$true)]
         [string]$cosmosbackup,
+
+        [Parameter(Mandatory=$true)]
+        [string]$destination,
