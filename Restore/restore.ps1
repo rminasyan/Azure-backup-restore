@@ -28,3 +28,10 @@ Write-Host ("INFO: $(Get-Date): Downloading PG backup file from SA")
 Get-AzStorageBlobContent -Container $containerName -blob "$backuppg.zip" -Destination $destination -Context $context
 Write-Host ("INFO: $(Get-Date): Finished downloading files")
 function RestoreCosmosDb
+    Param
+    (
+        [Parameter(Mandatory=$true)]
+        [string]$containerName,
+    
+        [Parameter(Mandatory=$true)]
+        [string]$cosmosbackup,
