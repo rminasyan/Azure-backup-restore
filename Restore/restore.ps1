@@ -41,3 +41,7 @@ function RestoreCosmosDb
 
         [Parameter(Mandatory=$true)]
         [string]$cosmosDb,
+
+        [Parameter(Mandatory=$true)]
+        [string]$cosmosConnStr
+    )
