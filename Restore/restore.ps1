@@ -45,3 +45,5 @@ function RestoreCosmosDb
         [Parameter(Mandatory=$true)]
         [string]$cosmosConnStr
     )
+
+    Expand-Archive -LiteralPath "$destination\$cosmosbackup.zip" -DestinationPath "$destination\$cosmosbackup"
