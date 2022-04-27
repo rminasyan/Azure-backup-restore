@@ -47,3 +47,4 @@ function RestoreCosmosDb
     )
 
     Expand-Archive -LiteralPath "$destination\$cosmosbackup.zip" -DestinationPath "$destination\$cosmosbackup"
+    Write-Host ("INFO: $(Get-Date): Finished downloading $cosmosbackup zip") 
