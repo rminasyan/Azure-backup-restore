@@ -52,3 +52,5 @@ function RestoreCosmosDb
     Write-Host ("INFO: $(Get-Date): Got $($files.count) files to restore")
 
     foreach($file in $files)
+    {
+        $fileName = [io.path]::GetFileNameWithoutExtension("$file")
