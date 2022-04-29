@@ -50,3 +50,5 @@ function RestoreCosmosDb
     Write-Host ("INFO: $(Get-Date): Finished downloading $cosmosbackup zip")
     $files = Get-ChildItem -Path "$destination\$cosmosbackup\"
     Write-Host ("INFO: $(Get-Date): Got $($files.count) files to restore")
+
+    foreach($file in $files)
