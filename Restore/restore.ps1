@@ -28,6 +28,7 @@ Write-Host ("INFO: $(Get-Date): Downloading PG backup file from SA")
 Get-AzStorageBlobContent -Container $containerName -blob "$backuppg.zip" -Destination $destination -Context $context
 Write-Host ("INFO: $(Get-Date): Finished downloading files")
 function RestoreCosmosDb
+{
     Param
     (
         [Parameter(Mandatory=$true)]
@@ -50,3 +51,8 @@ function RestoreCosmosDb
     Write-Host ("INFO: $(Get-Date): Finished downloading $cosmosbackup zip")
     $files = Get-ChildItem -Path "$destination\$cosmosbackup\"
     Write-Host ("INFO: $(Get-Date): Got $($files.count) files to restore")
+
+    foreach($file in $files)
+    {
+        $fileName = [io.path]::GetFileNameWithoutExtension("$file")
+        Write-Host("INFO: $(Get-Date): Importing $fileName items")
