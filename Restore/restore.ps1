@@ -56,3 +56,5 @@ function RestoreCosmosDb
     {
         $fileName = [io.path]::GetFileNameWithoutExtension("$file")
         Write-Host("INFO: $(Get-Date): Importing $fileName items")
+        dt.exe /s:JsonFile /s.Files:$file /t:DocumentDB /t.ConnectionString:"Database=$cosmosDb;$cosmosConnStr" /t.UpdateExisting /t.IdField:id /t.Collection:$fileName /t.PartitionKey:"/PartitionKey"
+    }
