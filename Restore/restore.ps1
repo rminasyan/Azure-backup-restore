@@ -60,3 +60,5 @@ function RestoreCosmosDb
     }
     Write-Host ("INFO: $(Get-Date): Finished restoring CosmosDb data")
 }
+
+function RestorePGserver
