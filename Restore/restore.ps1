@@ -64,3 +64,6 @@ function RestoreCosmosDb
 function RestorePGserver
 {
     Param
+    (
+        [Parameter(Mandatory=$true)]
+        [string]$backuppg,
