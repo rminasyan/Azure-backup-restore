@@ -67,6 +67,9 @@ function RestorePGserver
     (
         [Parameter(Mandatory=$true)]
         [string]$backuppg,
-        
+
         [Parameter(Mandatory=$true)]
         [string]$containerName,
+    
+        [Parameter(Mandatory=$true)]
+        [string]$pgserver,
