@@ -81,3 +81,5 @@ function RestorePGserver
         [string]$userName
 
     )
+
+    Expand-Archive -LiteralPath "$destination\$backuppg.zip" -DestinationPath "$destination\$backuppg"
