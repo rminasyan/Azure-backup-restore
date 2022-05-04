@@ -73,3 +73,6 @@ function RestorePGserver
     
         [Parameter(Mandatory=$true)]
         [string]$pgserver,
+
+        [Parameter(Mandatory=$true)]
+        [string]$destination,
