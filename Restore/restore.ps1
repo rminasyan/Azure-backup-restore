@@ -76,3 +76,8 @@ function RestorePGserver
 
         [Parameter(Mandatory=$true)]
         [string]$destination,
+
+        [Parameter(Mandatory=$true)]
+        [string]$userName
+
+    )
