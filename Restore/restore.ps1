@@ -84,3 +84,4 @@ function RestorePGserver
 
     Expand-Archive -LiteralPath "$destination\$backuppg.zip" -DestinationPath "$destination\$backuppg"
     Write-Host ("INFO: $(Get-Date): Finished downloading $backuppg zip") 
+    $files = Get-ChildItem -Path "$destination\$backuppg\"
