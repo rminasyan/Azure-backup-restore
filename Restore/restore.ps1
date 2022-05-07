@@ -86,3 +86,5 @@ function RestorePGserver
     Write-Host ("INFO: $(Get-Date): Finished downloading $backuppg zip") 
     $files = Get-ChildItem -Path "$destination\$backuppg\"
     Write-Host ("INFO: $(Get-Date): Got $($files.count) files to restore")
+
+    foreach ($file in $files)
