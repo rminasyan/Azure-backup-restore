@@ -91,3 +91,5 @@ function RestorePGserver
     {
         $fileName = [io.path]::GetFileNameWithoutExtension("$file")
         pg_restore.exe -v --no-owner --host=$pgserver --port=5432 --username=$userName --dbname=$fileName $file
+        Write-Host ("INFO: $(Get-Date): Finished $fileName DB restore operation")
+    }
