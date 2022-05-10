@@ -96,3 +96,5 @@ function RestorePGserver
     Write-Host ("INFO: $(Get-Date): Finished restoring PG all dbs")
 
 }
+
+RestoreCosmosDb -containerName $containerName -cosmosbackup $cosmosbackup -destination $destination -cosmosDb $cosmosDb -cosmosConnStr $cosmosConnStr
