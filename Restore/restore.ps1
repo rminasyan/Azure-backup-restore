@@ -98,3 +98,4 @@ function RestorePGserver
 }
 
 RestoreCosmosDb -containerName $containerName -cosmosbackup $cosmosbackup -destination $destination -cosmosDb $cosmosDb -cosmosConnStr $cosmosConnStr
+RestorePGserver -backuppg $backuppg -containerName $containerName -pgserver $pgserver -destination $destination -userName $userName
